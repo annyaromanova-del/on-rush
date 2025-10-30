@@ -95,7 +95,7 @@
 ---
 
 🧡 *Made with love by [Anna Romanova](https://romanova-anna.ru), 2025*  
-🎃 *ON Rush! — скорость решает всё.*
+⚡ *ON Rush! — скорость решает всё.*
 
 ---
 
@@ -169,4 +169,4 @@ You are free to **share** and **adapt** the materials for **non-commercial purpo
 ---
 
 🧡 *Made with love by [Anna Romanova](https://romanova-anna.ru), 2025*  
-🎃 *ON Rush! — Speed decides everything.*
+⚡ *ON Rush! — Speed decides everything.*
