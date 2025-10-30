@@ -31,7 +31,7 @@
 ---
 
 ## 🚀 Как запустить
-👉 [https://annyaromanova-del.github.io/on-rush/](https://annyaromanova-del.github.io/on-rush/)
+👉 [Играть в ON Rush!/](https://annyaromanova-del.github.io/on-rush/)
 
 ---
 
