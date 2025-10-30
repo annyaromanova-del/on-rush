@@ -974,7 +974,7 @@ function updatePlayerMotion(dt, now){
 }
 function update(dt,now){
   elapsedMs=now-startTime; timerEl.textContent=`⏱ ${(elapsedMs/1000).toFixed(1)}s`;
-  scoreEl.textContent=`🎃 ${pumpkins} / ${TARGET_PUMPKINS}`;
+  scoreEl.textContent=`🎁 ${pumpkins} / ${TARGET_PUMPKINS}`;
   const cappedLives = Math.min(lives, MAX_LIVES);
   const emptySlots = Math.max(0, BASE_LIVES - cappedLives);
   livesEl.textContent='❤️'.repeat(cappedLives)+'🤍'.repeat(emptySlots);
@@ -1332,7 +1332,7 @@ function init(){
   try{ document.getElementById('preloader')?.remove(); }catch(e){}
 
   ensureNick(); resizeCanvas();
-  scoreEl.textContent=`🎃 0 / ${TARGET_PUMPKINS}`;
+  scoreEl.textContent=`🎁 0 / ${TARGET_PUMPKINS}`;
   timerEl.textContent='⏱ 0.0s';
   livesEl.textContent='❤️'.repeat(BASE_LIVES);
   setParallax();
