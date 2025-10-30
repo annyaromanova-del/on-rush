@@ -258,18 +258,27 @@ function resizeCanvas(){
   const wrap = document.querySelector('.stage');
   const rect = wrap.getBoundingClientRect();
   const dpr = Math.max(1, Math.min(3, window.devicePixelRatio || 1));
+
   const maxLogicalW = Math.round(DESIGN_W * 1.12);
   const logicalW = Math.max(320, Math.min(maxLogicalW, Math.round(rect.width)));
   const availH = Math.max(360, Math.round((window.innerHeight||logicalW) - 80));
   const logicalH = Math.max(Math.round(logicalW * (DESIGN_H / DESIGN_W)), availH);
+
   canvas.style.width  = logicalW + 'px';
   canvas.style.height = logicalH + 'px';
   canvas.width  = Math.round(logicalW * dpr);
   canvas.height = Math.round(logicalH * dpr);
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  W = logicalW; H = logicalH; SCALE = W / DESIGN_W;
+
+  W = logicalW;
+  H = logicalH;
+  SCALE = W / DESIGN_W;
+
+  // как и было: лёгкая эвристика "мобилка/не мобилка"
   SIZE_BOOST = needsSizeBoost() ? 1.25 : 1;
   const mobileLike = SIZE_BOOST > 1;
+
+  // === базовый расчёт как у тебя сейчас ===
   const BASKET_SCALE = mobileLike ? 0.5 : 0.75;
   const minBasketWidth = Math.max(
     mobileLike ? 96 : 110,
@@ -279,11 +288,25 @@ function resizeCanvas(){
     mobileLike ? 28 : 34,
     Math.round((mobileLike ? 40 : 52) * BASKET_SCALE)
   );
+
+  // базовый размер корзины
   player.w = Math.max(minBasketWidth, Math.round(200 * SCALE * SIZE_BOOST * BASKET_SCALE));
-  player.h = Math.max(minBasketHeight, Math.round(38 * SCALE * SIZE_BOOST * BASKET_SCALE));
-  if (!Number.isFinite(player.x) || player.x === 0) player.x = (W - player.w) / 2;
-  else player.x = Math.max(0, Math.min(W - player.w, player.x));
+  player.h = Math.max(minBasketHeight, Math.round(38  * SCALE * SIZE_BOOST * BASKET_SCALE));
+
+  // === ДОБАВЛЕНО: на десктопе увеличить корзину ровно в 2 раза ===
+  if (!mobileLike) {
+    player.w = Math.round(player.w * 2);
+    player.h = Math.round(player.h * 2);
+  }
+
+  // позиционирование и клаймп после изменения размеров
+  if (!Number.isFinite(player.x) || player.x === 0) {
+    player.x = (W - player.w) / 2;
+  } else {
+    player.x = Math.max(0, Math.min(W - player.w, player.x));
+  }
   player.y = Math.round(H * 0.94) - player.h;
+
   basketTargetX = player.x;
   setParallax();
 }
