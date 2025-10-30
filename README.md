@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://annyaromanova-del.github.io/on-rush/cover.jpg" alt="ON Rush! cover" width="600"/><br><br>
+  <img src="https://annyaromanova-del.github.io/on-rush/banner.png alt="ON Rush! cover" width="600"/><br><br>
   🕹️ <b>Play:</b> <a href="https://annyaromanova-del.github.io/on-rush/" target="_blank">ON Rush! — игра от OnlineTrade.ru и XPG</a><br>
   🧠 <b>Code:</b> <a href="https://github.com/annyaromanova-del/on-rush" target="_blank">GitHub Repository</a><br>
   🧡 <b>Credits:</b> <a href="https://romanova-anna.ru" target="_blank">Romanova-Anna.ru</a><br>
