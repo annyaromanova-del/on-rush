@@ -1253,7 +1253,7 @@ function showVictory(now){
   }catch(e){}
   if(winLeaderboardEl) winLeaderboardEl.innerHTML = buildVictoryLeaderboard(LEADERBOARD_DISPLAY_LIMIT);
   if(winBonusEl){
-    winBonusEl.textContent = '🏆 Поздравляем с победой! Дарим промокод XPG_1111 на скидку 15%. Действует до 12 ноября на блоки питания XPG PYLON II 650W и 750W 🎁⚡️.';
+    winBonusEl.textContent = '🏆 Поздравляем с победой! Дарим промокод XPG_1111 на скидку 15%. Действует до 12 ноября на блоки питания XPG PYLON II 650W и 750W 🎁⚡️';
     winBonusEl.classList.remove('hidden');
   }
   messageOverlay.classList.remove('loss');
