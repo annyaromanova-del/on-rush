@@ -1243,7 +1243,7 @@ function showVictory(now){
   const safeNick = escapeHtml(displayName);
   const safeDiff = escapeHtml(modeLabel);
   const timeText = formatTime(elapsed);
-  msgText.innerHTML = `Поздравляем, <strong>${safeNick}</strong>! Ты собрал ${TARGET_PUMPKINS} тыкв за ${timeText} на уровне «${safeDiff}».`;
+  msgText.innerHTML = `Поздравляем, <strong>${safeNick}</strong>! Вы собрали ${TARGET_PUMPKINS} подарков за ${timeText} на уровне «${safeDiff}».`;
   if(winNickEl) winNickEl.textContent = displayName;
   if(winTimeEl) winTimeEl.textContent = timeText;
   if(winDiffEl) winDiffEl.textContent = modeLabel;
@@ -1253,7 +1253,7 @@ function showVictory(now){
   }catch(e){}
   if(winLeaderboardEl) winLeaderboardEl.innerHTML = buildVictoryLeaderboard(LEADERBOARD_DISPLAY_LIMIT);
   if(winBonusEl){
-    winBonusEl.textContent = '🎁 За отличную игру вы выиграли промокод HallSecret! Примените его, чтобы получить дополнительную скидку на товары месяца.';
+    winBonusEl.textContent = '🏆 Поздравляем с победой! Дарим промокод XPG_1111 на скидку 15%. Действует до 12 ноября на блоки питания XPG PYLON II 650W и 750W 🎁⚡️.';
     winBonusEl.classList.remove('hidden');
   }
   messageOverlay.classList.remove('loss');
@@ -1561,14 +1561,14 @@ function buildSharePayload(){
   const seconds = Number.isFinite(stats.seconds) ? stats.seconds : Math.max(0, elapsedMs/1000);
   const timeText = formatTime(seconds);
   const link = shareBaseLink();
-  const gameTitle = 'Hi, Halloween: Pumpkin Catcher!';
+  const gameTitle = 'ON Rush!';
   const imageUrl = getShareImageUrl();
   const shareLines = [
     gameTitle,
     `Никнейм: ${displayName}`,
     `Уровень сложности: ${modeLabel}`,
     `Результат по времени: ${timeText}`,
-    'Готовься к Хэллоуину вместе с нами! Узнай, а на что способен ты?',
+    'Поймайте свою выгоду вместе с нами! Узнайте, а на что способны вы?',
     `Картинка: ${imageUrl}`
   ];
   const text = shareLines.join('\n');
