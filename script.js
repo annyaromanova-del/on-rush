@@ -131,7 +131,7 @@ if (introOverlay){
 }
 
 let W = canvas.width, H = canvas.height;
-const TARGET_PUMPKINS = 100;
+const TARGET_PUMPKINS = 50;
 const BASE_LIVES = 3;
 const CANDY_BOOST_DURATION = 6000;
 const FOG_DURATION = CANDY_BOOST_DURATION;
