@@ -219,7 +219,7 @@ const WEB_STORM_DURATION = 30000;
 const DESIGN_W = 1350, DESIGN_H = 900; let SCALE = 1;
 let SIZE_BOOST = 1;
 const DIFF_LABELS = { easy:'Легко', normal:'Норм', hard:'Сложно', expert:'Эксперт' };
-const SLOW_MODE_NAME = 'Тыквопад';
+const SLOW_MODE_NAME = 'Подаркопад';
 const SLOW_MODE_EMOJI = '🍬';
 const SLOW_MODE_LABEL = `${SLOW_MODE_EMOJI} ${SLOW_MODE_NAME}`;
 const SLOW_MODE_HINT = `Режим «${SLOW_MODE_NAME}» активен`;
